@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     public float speed;
     public float jumpforce;
     private float timeAtack;
@@ -22,7 +21,6 @@ public class Player : MonoBehaviour
      sprite = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
        if(Input.GetKey(KeyCode.LeftArrow)){
@@ -69,7 +67,6 @@ public class Player : MonoBehaviour
            }
     }
     void OnCollisionEnter2D(Collision2D coll) {
-      //Persongaem tovando o chão
       if (coll.gameObject.layer == 8)
       {
           isGrounded = true;
